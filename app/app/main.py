@@ -49,6 +49,12 @@ def read_root():
     return load_fees()
 
 
+@app.get("/update")
+def update():
+    fetch_application_fees()
+    return {"msg": "records updated"}
+
+
 @app.get("/total-fees-collected-all-time/")
 def total_fees_collected_all_time():
     total = calculate_total_fees_collected()
