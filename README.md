@@ -1,12 +1,14 @@
 # Stripe Connect Connected Fees
 
-Show total collected fees via Stripe connect.
+API to show total collected fees via Stripe connect.
 
+<img src="https://user-images.githubusercontent.com/1718624/124388884-bacf5d80-dcdc-11eb-84fa-c6ed4a825d48.png" />
 
 # How to run locally
 
 
-## Setup
+## Setup!
+
 ```
 python3 -m venv venv
 . venv/bin/activate
