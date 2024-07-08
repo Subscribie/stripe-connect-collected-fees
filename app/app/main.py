@@ -72,3 +72,13 @@ def fees_by_year_month(year: Optional[int] = None, month: Optional[int] = None):
     return {
         "total-fees-collected": {"in-pennies": total, "in-pounds": total / 100}
     }  # noqa
+
+
+@app.get("/fees-collected-this-month")
+def fees_collected_this_month():
+    current_year = datetime.datetime.now().year
+    current_month = datetime.datetime.now().month
+    total = calculate_total_fees_collected(year=current_year, month=current_month)
+    return {
+        "total-fees-collected": {"in-pennies": total, "in-pounds": total / 100}
+    }  # noqa
